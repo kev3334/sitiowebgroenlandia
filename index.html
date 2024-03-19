@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Russo+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c9b87a4bee.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c9b87a4bee.js" crossorigin="anonymous"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="logoymenu">
+            <div id="logito">
+                <a href="index.html" id="logo"><i class="fa-solid fa-earth-americas" id="icon"></i></a>
+            </div>
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
+        <ul class="menu">
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#Acerca-de-mi">Acerca de</a></li>
+                <li><a href="#Que-hacer">¿Qué Hacer?</a></li>
+                <li><a href="#Ubicacion">Ubicación</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+        </ul>
+    </header>
+    <section id="Inicio">
+        <h1>GROENLANDIA</h1>
+    </section>
+    <section id="Acerca-de-mi" class="section">
+        <h2 id="t2">Acerca de Groenlandia</h2>
+        <div id="conatiner-acerca-de-mi">
+            <img src="img/nature.jpg" alt="imagen de naturaleza">
+            <img src="img/culture.jpg" alt="imagen de cultura">
+        </div>
+    </section>
+    <section id="Que-hacer" class="section">
+        <h2 id="t3">¿Qué Hacer?</h2>
+        <div class="container-que-hacer">
+            <img src="img/aurorafondo.jpg" alt="card 1" id="card1">
+            <img src="img/card2.jpg" alt="card 2">
+            <img src="img/card3.jpg" alt="card 3">
+            <img src="img/card4.jpg" alt="card 4">
+            <img src="img/card5.jpg" alt="card 5">
+            <img src="img/card6.jpg" alt="card 6">
+        </div>
+
+    </section>
+    <section id="Ubicacion" class="section">
+        <h2 id="t4">Ubicación</h2>
+        <div class="section-contenedor">
+            <div class="section-contenedor-1">
+                <p>
+                    Groenlandia se encuentra entre el Océano Ártico y el Norte Océano Atlántico, al noreste de Canadá y
+                    al noroeste de Islandia. El territorio comprende el isla de Groenlandia—es la isla más grande del
+                    mundo—y más de cien otras islas más pequeñas. Groenlandia posee la segunda capa de hielo más grande
+                    del mundo.
+                </p>
+            </div>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20535764.09708417!2d-33.50135145!3d71.69045985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ea20dbbe3c07715%3A0x34cf9d830114e218!2sGroenlandia!5e0!3m2!1ses-419!2spe!4v1710568728333!5m2!1ses-419!2spe"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </section>
+    <section id="Contacto" class="section">
+        <h2 id="t5">Contacto</h2>
+        <div class="container">
+            <form action="form.html" id="formulario" method="GET">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+            <p id="parrafo"></p>
+        </div>
+    </section>
+    <footer>
+        <h3>© Derechos Reservados 2024</h3>
+    </footer>
+</body>
+
+</html>
