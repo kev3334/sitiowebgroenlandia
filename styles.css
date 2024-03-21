@@ -7,18 +7,28 @@ html {
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    height: auto;
     position: fixed;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0);
-    border: solid white;
+    align-items: center;
+    overflow: hidden;
 }
 
-#icon {
-    color: white;
-    font-size: 2em;
+#logoymenu {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logito {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+}
+
+#logo {
+    font-size: 300%;
 }
 
 a {
@@ -27,31 +37,17 @@ a {
     font-family: "Russo One", sans-serif;
     font-size: 150%;
     text-shadow: 2px 2px 8px black;
-    border: solid yellow;
 
 }
-
-#logo {
-    margin-left: 1em;
-}
-/*
-nav {
-    color: white;
-    font-family: "Russo One", sans-serif;
-    width: 80%;
-    display: flex;
-    justify-content: right;
-    border: solid red;
-    
-}*/
 
 ul {
+    margin: 0;
     display: flex;
     list-style: none;
-    /*justify-content: space-around;*/
+    align-items: center;
     gap: 2px;
     width: 80vw;
-    border: solid green;
+    height: 10vh;
 
 }
 
@@ -59,6 +55,21 @@ li {
     text-align: center;
     width: 20%;
     font-size: 90%;
+}
+
+#check {
+    display: none;
+}
+
+.checkbtn {
+    font-size: 220%;
+    color: white;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    text-shadow: 2px 2px 8px black;
+    display: none;
 }
 
 #Inicio {
@@ -164,10 +175,7 @@ section {
     justify-content: space-evenly;
     padding-top: 2em;
     padding-bottom: 2em;
-
 }
-
-
 
 .section-contenedor-1 p {
     font-size: 0.8em;
@@ -177,7 +185,6 @@ section {
     font-family: "Source Sans Pro", sans-serif;
     color: white;
     text-shadow: 2px 2px 8px black, 2px 2px 8px black;
-
 }
 
 .section-contenedor iframe {
@@ -262,81 +269,135 @@ button:hover {
 
 
 /*MEDIA QUERIES RESPONSIVE MENU HAMBURGUESA*/
-#check{
-    display: none;
-}
-.checkbtn{
-    font-size: 220%;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    text-shadow: 2px 2px 8px black;
-    display: none;
-    border: solid white;
-}
+
 @media (max-width: 768px) {
-    header{
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        position: static;
+    header {
+        height: auto;
+        background-color: rgb(3, 3, 97);
+        overflow: visible;
+        opacity: 90%;
     }
-    #logoymenu{
-        width: 100%;
-        height: 20vh;
-        display: flex;
-        flex-direction: row;
-        position: fixed;
-        border: solid black;
-    }
-    #logito{
-        border: solid tomato;
-        width: 20%;
+
+    #logoymenu {
         height: auto;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-between;
+        /*flex-wrap: wrap;*/
+        position: relative;
     }
-    #logo {
-        margin-left: 0;
+
+    #logito,
+    .checkbtn {
+        height: 10vh;
     }
-    .checkbtn{
-        display: flex;
-        justify-content: right;
-        align-items: center;
-        width: 80%;
-        height: auto;
+
+    .checkbtn {
+        display: inline-block;
         cursor: pointer;
+        align-items: center;
     }
-    ul{
-        width: 95%;
-        height: 100vh;
+
+    .check:checked+ul {
+        height: 90vh;
+        left: -10px;
+        transition: all 0.8s;
+    }
+
+    #caja:target {
+        background-color: black;
+    }
+
+    ul {
+        background-color: rgb(38, 99, 160);
+        width: 100vw;
+        position: absolute;
+        top: 10vh;
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(5, 0, 49, 0.726);
-        border: solid red;
-        left: 100%;
-        transition: all 0.5s;
+        padding: 0;
+        gap: 1.5em;
+        height: 0;
+        overflow: hidden;
     }
 
-    #check:checked ~ .checkbtn {
-        left: 0%;
-    }
-    
-
-    ul li{
+    li {
+        margin: 0;
+        font-size: 1.5em;
         width: 100%;
-        height: 20%;
-        border: solid white;
-        display: block;
-        justify-content: center;
-        align-items: center;
-        font-size: 130%;
     }
 
+
+    /*ACERCA DE MI RESPONSIVE*/
+    section {
+        text-align: center;
+        height: 100vh;
+        padding-top: 2em;
+        font-family: "Trade Winds", system-ui;
+        font-size: 1.8em;
+        background-color: black;
+        overflow: hidden;
+        color: white;
+    }
+
+    #t2,
+    #t3,
+    #t4,
+    #t5 {
+        font-size: 80%;
+        padding-top: 1em;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        text-shadow: 2px 2px 8px black;
+    }
+
+    #conatiner-acerca-de-mi {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        overflow: visible;
+
+    }
+
+    #conatiner-acerca-de-mi img {
+        width: 55%;
+        height: 30vh;
+        margin-top: 0;
+        margin-bottom: 0;
+        background-attachment: fixed;
+        margin: 0.5em;
+    }
+
+    /*FIN ACERCA DE MI RESPONSIVE*/
+
+    /*SECCION UBICACION*/
+
+    .section-contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .section-contenedor-1 p {
+        font-size: 0.6em;
+        width: 100%;
+        padding: 0em 0.5em 0.5em 0.5em;
+    }
+
+    .section-contenedor iframe {
+        width: 50%;
+        height: 6em;
+
+    }
+    /*FIN SECCION UBICACION*/
+
+    /*SECCION QUE HACER*/
+
+    
+    .container-que-hacer img {
+        width: 40%;
+        margin: 0 0.2em 0 0.2em;
+    }
 }
